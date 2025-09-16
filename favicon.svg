@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="500" height="500">
+  <!-- 定义渐变和滤镜 -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f9a8d4" />
+      <stop offset="100%" stop-color="#c4b5fd" />
+    </linearGradient>
+    
+    <linearGradient id="brushGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ec4899" />
+      <stop offset="100%" stop-color="#8b5cf6" />
+    </linearGradient>
+    
+    <filter id="softShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="5" result="blur" />
+      <feFlood flood-color="#f9a8d4" flood-opacity="0.3" result="color" />
+      <feComposite in="color" in2="blur" operator="in" result="shadow" />
+      <feComposite in="SourceGraphic" in2="shadow" operator="over" />
+    </filter>
+    
+    <filter id="penShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="2" result="blur" />
+      <feFlood flood-color="#ec4899" flood-opacity="0.4" result="color" />
+      <feComposite in="color" in2="blur" operator="in" result="shadow" />
+      <feComposite in="SourceGraphic" in2="shadow" operator="over" />
+    </filter>
+  </defs>
+  
+  <!-- 圆形背景 -->
+  <circle cx="250" cy="250" r="240" fill="white" stroke="url(#bgGradient)" stroke-width="15" />
+  
+  <!-- 装饰性的弧线 -->
+  <path d="M 100,250 A 150,150 0 0,1 400,250" fill="none" stroke="url(#bgGradient)" stroke-width="10" stroke-linecap="round" stroke-opacity="0.5" stroke-dasharray="0,20" />
+  <path d="M 100,280 A 150,150 0 0,1 400,280" fill="none" stroke="url(#bgGradient)" stroke-width="6" stroke-linecap="round" stroke-opacity="0.3" />
+  <path d="M 100,220 A 150,150 0 0,0 400,220" fill="none" stroke="url(#bgGradient)" stroke-width="8" stroke-linecap="round" stroke-opacity="0.4" stroke-dasharray="0,15" />
+  
+  <!-- 画笔图形 -->
+  <g transform="translate(250, 200) rotate(-30)" filter="url(#penShadow)">
+    <!-- 画笔主体 -->
+    <rect x="-15" y="-90" width="30" height="160" rx="15" fill="url(#brushGradient)" />
+    
+    <!-- 画笔尖端 -->
+    <path d="M -15,-90 Q 0,-120 15,-90" fill="url(#brushGradient)" />
+    
+    <!-- 画笔装饰 -->
+    <rect x="-15" y="30" width="30" height="10" fill="#f0f0f0" opacity="0.7" />
+    <rect x="-15" y="0" width="30" height="5" fill="#f0f0f0" opacity="0.5" />
+  </g>
+  
+  <!-- 曲线文字路径 -->
+  <path id="curvedPath" d="M 120,330 Q 250,200 380,330" fill="none" />
+  
+  <!-- 沿着路径的文字效果 - 显示出产品功能 -->
+  <text font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="url(#brushGradient)" filter="url(#softShadow)">
+    <textPath href="#curvedPath" startOffset="50%" text-anchor="middle"></textPath>
+  </text>
+  
+  <!-- 绘制效果 - 模拟笔触 -->
+  <g transform="translate(120, 350)">
+    <path d="M 0,0 Q 40,-30 70,-10 Q 100,10 140,-5 Q 180,-20 220,0 Q 260,20 280,-10" 
+          fill="none" stroke="url(#brushGradient)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
+    
+    <!-- 小装饰点 -->
+    <circle cx="0" cy="0" r="6" fill="#ec4899" />
+    <circle cx="280" cy="-10" r="6" fill="#8b5cf6" />
+  </g>
+  
+  <!-- 小标志 - Toolooz -->
+  <text x="250" y="390" font-family="Arial, sans-serif" font-size="26" font-weight="bold" fill="#ec4899" text-anchor="middle" filter="url(#softShadow)">
+    涂鹿 Toolooz
+  </text>
+  
+  <!-- 装饰性气泡 -->
+  <circle cx="170" cy="140" r="12" fill="url(#bgGradient)" opacity="0.7" />
+  <circle cx="140" cy="160" r="8" fill="url(#bgGradient)" opacity="0.5" />
+  <circle cx="190" cy="120" r="10" fill="url(#bgGradient)" opacity="0.6" />
+  
+  <circle cx="330" cy="140" r="12" fill="url(#bgGradient)" opacity="0.7" />
+  <circle cx="360" cy="160" r="8" fill="url(#bgGradient)" opacity="0.5" />
+  <circle cx="310" cy="120" r="10" fill="url(#bgGradient)" opacity="0.6" />
+</svg> 
