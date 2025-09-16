@@ -1,9 +1,12 @@
 
+
 ## 鲁虺LIVP转换器
 
 一个轻量级、隐私优先的在线工具，用于处理iPhone实况照片(LIVP格式)的转换与提取。一个免费的将iPhone的实况照片（LIVP格式）转换为JPG格式的工具。可以通过简单的拖放操作，将LIVP文件上传到网站进行批量转换。不仅支持将LIVP文件转换为JPG，还可以提取HEIC图片和MOV视频。
 
-关于LIVP转换器 LIVP转换器是一款专业的iPhone实况照片在线处理工具，帮助用户轻松处理LIVP文件。 .livp 文件是苹果 iPhone 拍摄的 live 图格式，当我们解压缩 .livp，可以发现 .livp 文件实际上是由一个 jpeg / heic 和 mov 组成的，本工具就是帮您简单快捷地将 .livp 文件中的 jpeg / heic 提取出来。
+# 关于LIVP转换器 
+
+LIVP转换器是一款专业的iPhone实况照片在线处理工具，帮助用户轻松处理LIVP文件。 .livp 文件是苹果 iPhone 拍摄的 live 图格式，当我们解压缩 .livp，可以发现 .livp 文件实际上是由一个 jpeg / heic 和 mov 组成的，本工具就是帮您简单快捷地将 .livp 文件中的 jpeg / heic 提取出来。
 
 # 故事
 
